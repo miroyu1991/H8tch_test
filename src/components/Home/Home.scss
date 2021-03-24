@@ -1,0 +1,208 @@
+$bgColor: rgb(102, 109, 114);
+$itemOddColor: rgb(214, 214, 214);
+$itemEvenColor: rgb(102, 109, 114);
+$midScreen: 768px;
+
+.pageContainer{
+    background-color: $bgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 800px;
+
+    .homeContainer{
+        background-color: $bgColor;
+        margin: 24px;
+        max-width: 900px;
+    
+        span{
+            font-family: 'Helvetica';
+            font-size: 24px;
+        }
+
+        .homeDesc{
+            p{
+                font-family: 'Helvetica';
+                color: rgba(87, 232, 252, 0.658);
+                font-size: 24px;
+            }
+        
+            h1{
+                font-family: 'Merriweather', Georgia, serif;
+                color: #fff;
+                font-style: italic;
+                font-size: 48px;
+            }
+            
+        }
+
+        .homeTitle{
+            width: 100%;
+            margin: 24px 0;
+            color: #fff;
+            background: linear-gradient($itemOddColor, $itemEvenColor);
+            text-align: center;
+        }
+
+        .toolContainer{
+            display: flex;
+            @media (max-width: $midScreen){
+                flex-direction: column;
+            }
+
+            .addToolContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 34%;
+
+                :nth-child(n){
+                    margin: 4px;
+                }
+        
+                @media (max-width: $midScreen){
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+
+                .addItemBtn{
+                    background: $bgColor;
+                    border: 2px solid #fff;
+                    color: #fff;
+                    text-align: center;
+                    
+                }
+
+                .toolItem{
+                    span,::placeholder{
+                        font-size: 14px;
+                        color:#cecfd1;
+                    }
+                    .searchContent{
+                        display: none;
+                    }
+                }
+
+
+                input[type="text"], button, select{
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    height: 50px;
+                    border: 2px solid #fff;
+                    color:#cecfd1;
+                    -web-kit-appearance:none;
+                    -moz-appearance: none;
+                    display:block;
+                    outline:0;
+                    background: gray;
+                    text-decoration:none;
+                    width:100%;
+                    max-width: 250px;
+                    text-align: left;
+
+                    @media (max-width: $midScreen){
+                        width:100%;
+                        font-size: 12px;
+                        height: 40px;
+                    }
+                }
+
+                input[type="text"]:focus{
+                    border:1px solid #ff7496;
+                }
+
+                select:focus{
+                    border:1px solid #ff7496;
+                }
+            }
+        
+            .showToolContainer{
+                width: 66%;
+                display: flex;
+                justify-content: center;
+                background-color: $bgColor;
+                padding: 4px;
+        
+                @media (max-width: $midScreen){
+                    width: 100%;
+                    flex-direction: column;
+                }
+        
+                .colContainer{
+                    width: 50%;
+                    background-color: #fff;
+                    padding: 2px;
+
+                    @media (max-width: $midScreen){
+                        width: 100%;
+                    }
+
+                    .colTitle{
+                        background-color: gray;
+                        padding: 8px;
+                        text-align: center;
+                        background: linear-gradient($itemOddColor, $itemEvenColor);
+                        span{
+                            font-size: 16px;
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                    }
+        
+                    .itemList{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        
+                        .itemContainer{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            padding: 8px;
+                            .itemBtn{
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+        
+                    .itemList:nth-child(odd){
+                        background-color: $itemOddColor;
+                        .itemContent{
+                            color: $itemEvenColor;
+                        }
+                        .itemBtn{
+                            color: $itemEvenColor;
+                            background-color: $itemOddColor;
+                            border: 2px solid $itemEvenColor;
+                        }
+                    }
+        
+                    .itemList:nth-child(even){
+                        background-color: $itemEvenColor;
+        
+                        .itemContent{
+                            color: $itemOddColor;
+                        }
+        
+                        .itemBtn{
+                            color: $itemOddColor;
+                            background-color: $itemEvenColor;
+                            border: 2px solid $itemOddColor;
+                        }
+                    }
+                    
+                }  
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

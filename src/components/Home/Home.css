@@ -1,0 +1,203 @@
+.pageContainer {
+  background-color: #666d72;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 800px;
+}
+
+.pageContainer .homeContainer {
+  background-color: #666d72;
+  margin: 24px;
+  max-width: 900px;
+}
+
+.pageContainer .homeContainer span {
+  font-family: 'Helvetica';
+  font-size: 24px;
+}
+
+.pageContainer .homeContainer .homeDesc p {
+  font-family: 'Helvetica';
+  color: rgba(87, 232, 252, 0.658);
+  font-size: 24px;
+}
+
+.pageContainer .homeContainer .homeDesc h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  color: #fff;
+  font-style: italic;
+  font-size: 48px;
+}
+
+.pageContainer .homeContainer .homeTitle {
+  width: 100%;
+  margin: 24px 0;
+  color: #fff;
+  background: linear-gradient(#d6d6d6, #666d72);
+  text-align: center;
+}
+
+.pageContainer .homeContainer .toolContainer {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .pageContainer .homeContainer .toolContainer {
+    flex-direction: column;
+  }
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 34%;
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer :nth-child(n) {
+  margin: 4px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer .homeContainer .toolContainer .addToolContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer .addItemBtn {
+  background: #666d72;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer .toolItem span, .pageContainer .homeContainer .toolContainer .addToolContainer .toolItem ::placeholder {
+  font-size: 14px;
+  color: #cecfd1;
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer .toolItem .searchContent {
+  display: none;
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer input[type="text"], .pageContainer .homeContainer .toolContainer .addToolContainer button, .pageContainer .homeContainer .toolContainer .addToolContainer select {
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 50px;
+  border: 2px solid #fff;
+  color: #cecfd1;
+  -web-kit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  outline: 0;
+  background: gray;
+  text-decoration: none;
+  width: 100%;
+  max-width: 250px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .pageContainer .homeContainer .toolContainer .addToolContainer input[type="text"], .pageContainer .homeContainer .toolContainer .addToolContainer button, .pageContainer .homeContainer .toolContainer .addToolContainer select {
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+  }
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer input[type="text"]:focus {
+  border: 1px solid #ff7496;
+}
+
+.pageContainer .homeContainer .toolContainer .addToolContainer select:focus {
+  border: 1px solid #ff7496;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer {
+  width: 66%;
+  display: flex;
+  justify-content: center;
+  background-color: #666d72;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer .homeContainer .toolContainer .showToolContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer {
+  width: 50%;
+  background-color: #fff;
+  padding: 2px;
+}
+
+@media (max-width: 768px) {
+  .pageContainer .homeContainer .toolContainer .showToolContainer .colContainer {
+    width: 100%;
+  }
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .colTitle {
+  background-color: gray;
+  padding: 8px;
+  text-align: center;
+  background: linear-gradient(#d6d6d6, #666d72);
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .colTitle span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList .itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList .itemContainer .itemBtn {
+  border-radius: 4px;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(odd) {
+  background-color: #d6d6d6;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(odd) .itemContent {
+  color: #666d72;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(odd) .itemBtn {
+  color: #666d72;
+  background-color: #d6d6d6;
+  border: 2px solid #666d72;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(even) {
+  background-color: #666d72;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(even) .itemContent {
+  color: #d6d6d6;
+}
+
+.pageContainer .homeContainer .toolContainer .showToolContainer .colContainer .itemList:nth-child(even) .itemBtn {
+  color: #d6d6d6;
+  background-color: #666d72;
+  border: 2px solid #d6d6d6;
+}
